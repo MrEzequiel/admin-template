@@ -1,3 +1,5 @@
+import Title from '../Title'
+
 interface HeaderProps {
   title: string
   subTitle: string
@@ -6,7 +8,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ title, subTitle }) => {
   return (
     <header>
-      <h1>{title}</h1>
+      <Title title={title} subTitle={subTitle} />
     </header>
   )
 }

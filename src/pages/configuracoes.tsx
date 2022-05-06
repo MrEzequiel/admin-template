@@ -4,7 +4,10 @@ import Layout from '../components/templates/Layout'
 const Home: NextPage = () => {
   return (
     <>
-      <Layout title="Home" subTitle="Aqui vem sua home!">
+      <Layout
+        title="Configurações"
+        subTitle="Aqui você verá suas configurações!"
+      >
         muito legal
       </Layout>
     </>

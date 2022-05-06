@@ -11,7 +11,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ title, subTitle, children }) => {
   return (
     <div className="flex h-screen w-screen">
-      <SideMenu title={title} subTitle={subTitle} />
+      <SideMenu />
 
       <div className="flex w-full flex-col p-7 bg-gray-100 dark:bg-slate-900">
         <Header title={title} subTitle={subTitle} />
