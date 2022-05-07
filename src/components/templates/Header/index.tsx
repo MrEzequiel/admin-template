@@ -7,7 +7,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ title, subTitle }) => {
   return (
-    <header className="border-b-2 px-7 h-20 flex justify-between items-center">
+    <header className="border-b-2 px-7 h-20 flex justify-between items-center dark:border-gray-800">
       <Title title={title} subTitle={subTitle} />
     </header>
   )

@@ -19,7 +19,7 @@ const SideMenuItem: React.FC<SideMenuItemProps> = ({
   const renderLink = () => (
     <a
       className={
-        'flex flex-col justify-center items-center h-20 px-4 cursor-pointer text-gray-600 transition-all ' +
+        'flex flex-col justify-center items-center h-20 px-4 cursor-pointer text-gray-600 transition-all dark:text-gray-200 ' +
         className
       }
       {...anchorProps}
@@ -31,8 +31,8 @@ const SideMenuItem: React.FC<SideMenuItemProps> = ({
 
   return (
     <li
-      className={`hover:bg-slate-100 transition-all  ${
-        pathname === url && 'bg-slate-200'
+      className={`hover:bg-slate-100 hover:dark:bg-slate-700 transition-all  ${
+        pathname === url && 'bg-slate-200 dark:bg-slate-800'
       }`}
     >
       {url ? <Link href={url}>{renderLink()}</Link> : renderLink()}

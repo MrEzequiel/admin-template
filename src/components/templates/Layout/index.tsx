@@ -10,7 +10,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ title, subTitle, children }) => {
   return (
-    <div className="flex h-screen w-screen">
+    <div className="dark flex h-screen w-screen">
       <SideMenu />
 
       <div className="flex w-full flex-col bg-gray-100 dark:bg-slate-900">

@@ -3,7 +3,7 @@ import SideMenuItem from './SideMenuItem'
 
 const SideMenu: React.FC = () => {
   return (
-    <aside className="flex flex-col">
+    <aside className="flex flex-col dark:bg-gray-900 dark:text-gray-200 bg-gray-200 text-gray-700">
       <div className="h-20 w-full bg-gradient-to-r from-indigo-500 to-purple-800 flex items-center justify-center">
         <Logo style={{ fontSize: '.2rem' }} />
       </div>
