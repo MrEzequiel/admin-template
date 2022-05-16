@@ -1,9 +1,13 @@
+import { useEffect, useState } from 'react'
+
+import { useRouter } from 'next/router'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
+
 import Input from '../components/Input'
+
+import { useAuth } from '../Context/AuthContext'
 
 const Registro: NextPage = () => {
   const [modeRegister, setModeRegister] = useState<'login' | 'register'>(
@@ -11,13 +15,15 @@ const Registro: NextPage = () => {
   )
   const router = useRouter()
 
+  const { user, signInGoogle } = useAuth()
+
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
 
   useEffect(() => {
     const query = router.asPath.split('?')[1]
-    const mode = query.split('=')[1]
+    const mode = query ? query.split('=')[1] : null
 
     if (!mode) {
       setModeRegister('login')
@@ -67,7 +73,10 @@ const Registro: NextPage = () => {
 
           <hr className="my-6 border-gray-300 w-full border-dashed" />
 
-          <button className="w-full bg-red-500 hover:bg-red-600 transition-all text-white rounded-lg px-4 py-3">
+          <button
+            onClick={signInGoogle}
+            className="w-full bg-red-500 hover:bg-red-600 transition-all text-white rounded-lg px-4 py-3"
+          >
             Entrar com Google
           </button>
 
