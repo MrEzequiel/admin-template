@@ -4,6 +4,8 @@ import IUser from '../../interfaces/IUser'
 export interface IAuthContext {
   signInGoogle: () => Promise<void>
   signOut: () => Promise<void>
+  signIn: (email: string, password: string) => Promise<unknown>
+  signUp: (email: string, password: string) => Promise<unknown>
   loadingAuth: boolean
   user?: IUser | null
 }

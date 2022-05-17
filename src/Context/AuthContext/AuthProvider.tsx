@@ -55,6 +55,40 @@ const AuthProvider: FC<PropsWithChildren<unknown>> = ({ children }) => {
     }
   }
 
+  const signUp = async (email: string, password: string) => {
+    try {
+      const response = await firebase
+        .auth()
+        .createUserWithEmailAndPassword(email, password)
+
+      const user = await loadUser(response.user)
+      if (user) {
+        router.push('/')
+      } else {
+        return false
+      }
+    } catch (error) {
+      return error
+    }
+  }
+
+  const signIn = async (email: string, password: string) => {
+    try {
+      const response = await firebase
+        .auth()
+        .signInWithEmailAndPassword(email, password)
+
+      const user = await loadUser(response.user)
+      if (user) {
+        router.push('/')
+      } else {
+        return false
+      }
+    } catch (error) {
+      return error
+    }
+  }
+
   const signInGoogle = async () => {
     const response = await firebase
       .auth()
@@ -89,7 +123,9 @@ const AuthProvider: FC<PropsWithChildren<unknown>> = ({ children }) => {
       value={{
         user,
         signInGoogle,
+        signIn,
         signOut,
+        signUp,
         loadingAuth
       }}
     >

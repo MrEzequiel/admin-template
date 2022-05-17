@@ -36,7 +36,9 @@ const Header: React.FC<HeaderProps> = ({
 
         {user && (
           <div className="ml-2 flex items-center gap-3 px-4 py-2 rounded-full dark:bg-slate-800 bg-slate-50 shadow-lg">
-            <p className="text-gray-500 dark:text-gray-300 ">{user.name}</p>
+            <p className="text-gray-500 dark:text-gray-300 ">
+              {user?.name || user.email}
+            </p>
 
             {user.image ? (
               <Image
