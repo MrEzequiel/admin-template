@@ -1,34 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+  Admin Template
+</h1>
 
-## Getting Started
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#-aprendizado">Aprendizado</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#-autor">Autor</a>&nbsp;&nbsp;
+</p>
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## ✨ Preview
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+https://user-images.githubusercontent.com/85039218/168914530-84587397-bbac-48b5-b31d-f5eb9ebce980.mp4
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+[Preview](https://admin-template-iota.vercel.app)
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Tecnologias
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Este projeto foi feito utilizando as seguintes tecnologias:
 
-## Deploy on Vercel
+- ReactJS ⚛️
+- NextJS ▲
+- tailwindcss
+- firebase
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 📐 Projeto
+
+A aplicação foi feita a partir do curso de [NextJS](https://www.udemy.com/course/nextjs-e-react/) onde aprendi conceitos do mesmo e essa aplicação para autenticação do usuário por meio do firebase.
+
+## 📒 Aprendizado
+
+- [x] NextJS: Hocs, Protect Pages, funcionalidades do hook router;
+- [x] ReactJS: Auth Context, Redirect, cookies de autenticação;
+- [x] Firebase: Login com google, login e cadastro com email e senha;
+- [x] tailwindcss: Estilos em geral e modo escuro.
+
+
+## 👨‍💻 Autor
+
+- Github: <a href="https://github.com/MrEzequiel">MrEzequiel</a>
+- Instagram: <a href="https://www.instagram.com/ezequield3v/">@ezequield3v</a>
+- Linkedin: <a href="https://www.linkedin.com/in/ezequiel-soares-da-silva-b64a64207">Ezequiel Soares</a>
+
+<br>
+<h2 align="center">Feito ♥ por Ezequiel</h2>
