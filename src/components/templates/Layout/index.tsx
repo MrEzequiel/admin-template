@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { useEffect, useRef, useState } from 'react'
+import ProtectRouter from '../../ProtectRouter'
 import Header from '../Header'
 import Main from '../Main'
 import SideMenu from '../SideMenu'
@@ -36,19 +37,22 @@ const Layout: React.FC<LayoutProps> = ({ title, subTitle, children }) => {
         <title>{title}</title>
       </Head>
 
-      <div className={`flex h-screen w-screen ${isDarkMode && 'dark'}`}>
-        <SideMenu />
+      <ProtectRouter>
+        <div className={`flex h-screen w-screen ${isDarkMode && 'dark'}`}>
+          <SideMenu />
 
-        <div className="flex w-full flex-col bg-gray-100 dark:bg-slate-900">
-          <Header
-            title={title}
-            subTitle={subTitle}
-            setIsDarkMode={setIsDarkMode}
-            isDarkMode={isDarkMode}
-          />
-          <Main>{children}</Main>
+          <div className="flex w-full flex-col bg-gray-100 dark:bg-slate-900">
+            <Header
+              title={title}
+              subTitle={subTitle}
+              setIsDarkMode={setIsDarkMode}
+              isDarkMode={isDarkMode}
+            />
+
+            <Main>{children}</Main>
+          </div>
         </div>
-      </div>
+      </ProtectRouter>
     </>
   )
 }

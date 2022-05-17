@@ -79,6 +79,8 @@ const AuthProvider: FC<PropsWithChildren<unknown>> = ({ children }) => {
       return () => {
         observer()
       }
+    } else {
+      setLoadingAuth(false)
     }
   }, [])
 
@@ -87,7 +89,8 @@ const AuthProvider: FC<PropsWithChildren<unknown>> = ({ children }) => {
       value={{
         user,
         signInGoogle,
-        signOut
+        signOut,
+        loadingAuth
       }}
     >
       {children}
